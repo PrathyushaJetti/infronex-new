@@ -1,0 +1,7 @@
+node_modules/
+*.zip
+*.rar
+*.mp4
+*.psd
+*.sql
+.cache/

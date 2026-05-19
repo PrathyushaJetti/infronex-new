@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Inforx - AI-Powered Surveillance & Security Intelligence Platform">
+    <meta name="keywords"
+        content="AI surveillance, smart city security, traffic monitoring, crowd management, public safety AI">
+    <meta name="author" content="Inforx">
+    <!-- Page Title -->
+    <title>Inforx - AI-Powered Surveillance & Security Intelligence</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpeg">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+	<style>
+		/* Page intro text */
+		.ai-page-intro {
+			padding: 50px 0 30px;
+		}
+		.ai-page-intro p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #4a5568;
+			margin-bottom: 14px;
+		}
+
+		/* Sub-section heading — matches template heading style */
+		.ai-sub-heading {
+			width: 100%;
+			padding: 10px 0 30px;
+		}
+		.ai-sub-heading h2 {
+			font-size: 30px;
+			font-weight: 800;
+			color: #1a1a2e;
+			margin: 0;
+			position: relative;
+			padding-bottom: 14px;
+		}
+		.ai-sub-heading h2::after {
+			content: '';
+			position: absolute;
+			bottom: 0; left: 0;
+			width: 50px; height: 3px;
+			background: #0a3cff;
+			border-radius: 2px;
+		}
+
+		/* Description text inside project-content */
+		.project-content .cap-desc {
+			font-size: 14px;
+			color: white;
+			line-height: 1.65;
+			margin-top: 6px;
+		}
+
+		/* Operational Advantages — reuse project-content card feel */
+		.adv-item {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			padding: 16px 20px;
+			border: 1px solid #e8edf5;
+			border-radius: 10px;
+			margin-bottom: 16px;
+			background: #fff;
+			transition: box-shadow 0.25s, transform 0.25s;
+		}
+		.adv-item:hover {
+			box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+			transform: translateY(-2px);
+		}
+		.adv-item i {
+			font-size: 18px;
+			color: #0a3cff;
+			min-width: 22px;
+		}
+		.adv-item span {
+			font-size: 15px;
+			font-weight: 600;
+			color: #1a1a2e;
+		}
+        p{
+            color:white
+        }
+		/* ── Text overlaid on image with one solid color overlay ── */
+.project-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-image figure {
+    margin: 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Single color overlay over the entire card */
+.project-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 60, 0.55);  /* ← one solid dark overlay */
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.project-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 18px;
+    z-index: 2;
+    background: transparent;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+
+</style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="img/logo.jpeg" alt=""></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Topbar Section Start -->
+    <div class="topbar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="topbar-info-text">
+                        <p>AI-powered intelligence for safer cities and smarter operations <a
+                                href="contact.html">Request a Demo</a></p>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="topbar-links">
+                        <!-- <div class="topbar-contact-info">
+                            <ul>
+                                <li><a href="contact.html">Help</a></li>
+                                <li><a href="contact.html">Support</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="topbar-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar Section End -->
+
+    <!-- Header Start -->
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.jpeg" alt="Inforx Logo" style="height: 90px;">
+                    </a>
+                    <!-- Logo End -->
+
+                    <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="solutions.html">Solutions</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/traffic-monitoring.html">Traffic Monitoring</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/crowd-management.html">Crowd Management</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/flood-water-monitoring.html">Flood & Water
+                                                Monitoring</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/public-safety-monitoring.html">Public Safety
+                                                Monitoring</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/emergency-response-coordination.html">Emergency
+                                                Response Coordination</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/centralized-command-center.html">Centralized Command
+                                                Center</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/ai-alert-escalation-systems.html">AI Alert &
+                                                Escalation Systems</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/smart-surveillance-systems.html">Smart Surveillance
+                                                Systems</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/incident-detection.html">Incident Detection</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="./solutions/predictive-analytics-intelligence.html">Predictive
+                                                Analytics & Intelligence</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="why-infonix.html">Why Inforx</a></li>
+                                <li class="nav-item"><a class="nav-link" href="ai-power-solution.html">AI Power
+                                        Solutions</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Header Btn Start -->
+                        <div class="header-btn">
+                            <a href="contact.html" class="btn-default">Request Demo</a>
+                        </div>
+                        <!-- Header Btn End -->
+                    </div>
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+	<!-- Page Header Start -->
+	<div class="page-header parallaxie">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<div class="page-header-box">
+						<h1 class="wow fadeInUp" data-cursor="-opaque">AI Capabilities</h1>
+						<nav class="wow fadeInUp" data-wow-delay="0.2s">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Home</a>/AI Capabilities</li>
+								<!-- <li class="breadcrumb-item active" aria-current="page"></li> -->
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page Header End -->
+
+	<!-- Page Projects Start -->
+	<div class="page-projects">
+		<div class="container">
+
+			<!-- ── Intro ── -->
+			<div class="ai-page-intro wow fadeInUp">
+				<p>Our AI capabilities are designed to transform traditional monitoring systems into intelligent, real-time operational ecosystems that enable faster decision-making, enhanced situational awareness, and automated response mechanisms.</p>
+				<p>By combining advanced artificial intelligence, real-time analytics, and scalable digital infrastructure, the platform helps organizations monitor, detect, analyze, predict, and respond to operational events with greater speed, accuracy, and efficiency.</p>
+			</div>
+
+			<!-- ── Core AI Capabilities ── -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="ai-sub-heading wow fadeInUp">
+						<h2>Core AI Capabilities</h2>
+					</div>
+				</div>
+
+				<!-- 1 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Real-Time AI Detection.jpg" alt="Real-Time AI Detection">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Detection</p>
+							<h3>Real-Time AI Detection</h3>
+							<p class="cap-desc">Continuously monitors live surveillance and operational data to identify incidents, anomalies, violations, and operational risks in real time.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="0.2s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Intelligent Video Analytics.jpg" alt="Intelligent Video Analytics">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Analytics</p>
+							<h3>Intelligent Video Analytics</h3>
+							<p class="cap-desc">Processes video feeds using advanced AI models to analyze movement, objects, crowd patterns, and operational activities across multiple environments.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="0.4s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Predictive Analytics.jpg" alt="Predictive Analytics">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Forecasting</p>
+							<h3>Predictive Analytics</h3>
+							<p class="cap-desc">Uses historical and real-time data to identify trends, forecast risks, and support proactive operational planning and decision-making.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 4 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Incident Detection & Monitoring.jpg" alt="Incident Detection">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Monitoring</p>
+							<h3>Incident Detection &amp; Monitoring</h3>
+							<p class="cap-desc">Automatically identifies incidents such as accidents, suspicious activities, unauthorized access, wrong-way vehicles, and operational disruptions.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 5 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="0.8s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Crowd Density & Behavioral Analysis.jpg" alt="Crowd Density Analysis">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Crowd Intelligence</p>
+							<h3>Crowd Density &amp; Behavioral Analysis</h3>
+							<p class="cap-desc">Analyzes crowd movement, density patterns, and unusual behavioral activities to improve public safety and operational visibility.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 6 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="1s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Traffic Flow & Congestion Analysis.jpg" alt="Traffic Flow Analysis">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Transportation</p>
+							<h3>Traffic Flow &amp; Congestion Analysis</h3>
+							<p class="cap-desc">Monitors traffic movement, congestion levels, and road activity to improve traffic intelligence and transportation management.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 7 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="1.2s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Smart Alert & Escalation Systems.jpg" alt="Smart Alert Systems">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Alerts</p>
+							<h3>Smart Alert &amp; Escalation Systems</h3>
+							<p class="cap-desc">Generates intelligent real-time alerts and supports automated escalation workflows for faster operational response.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 8 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="1.4s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Centralized Operational Intelligence.jpg" alt="Centralized Intelligence">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Intelligence</p>
+							<h3>Centralized Operational Intelligence</h3>
+							<p class="cap-desc">Integrates multiple surveillance and operational systems into a unified intelligence platform for centralized monitoring and visibility.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 9 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="1.6s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/AI-Powered Dashboards & Reporting.jpg" alt="AI Dashboards">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Reporting</p>
+							<h3>AI-Powered Dashboards &amp; Reporting</h3>
+							<p class="cap-desc">Provides intelligent dashboards, analytics visualization, operational reports, and real-time situational insights.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 10 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="1.8s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Edge AI Processing.jpg" alt="Edge AI Processing">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Processing</p>
+							<h3>Edge AI Processing</h3>
+							<p class="cap-desc">Enables real-time data processing closer to the source for faster analysis, reduced latency, and improved operational efficiency.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 11 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="2s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Pattern Recognition & Risk Assessment.jpg" alt="Pattern Recognition">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Risk Assessment</p>
+							<h3>Pattern Recognition &amp; Risk Assessment</h3>
+							<p class="cap-desc">Identifies operational trends, recurring incidents, anomalies, and high-risk activities through intelligent pattern analysis.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 12 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="2.2s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Forecasting & Decision Support.jpg" alt="Forecasting">
+							</figure>
+						</div>
+						<div class="project-content">
+							<p>Decision Support</p>
+							<h3>Forecasting &amp; Decision Support</h3>
+							<p class="cap-desc">Supports organizations with predictive intelligence and data-driven recommendations to improve planning and operational control.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Core AI Capabilities row end -->
+
+			<!-- ── Operational Advantages ── -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="ai-sub-heading wow fadeInUp">
+						<h2>Operational Advantages</h2>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<div class="adv-item wow fadeInUp">
+						<i class="fa-solid fa-bolt"></i>
+						<span>Faster incident response</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="adv-item wow fadeInUp" data-wow-delay="0.1s">
+						<i class="fa-solid fa-eye"></i>
+						<span>Enhanced situational awareness</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="adv-item wow fadeInUp" data-wow-delay="0.2s">
+						<i class="fa-solid fa-robot"></i>
+						<span>Reduced manual monitoring efforts</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="adv-item wow fadeInUp" data-wow-delay="0.3s">
+						<i class="fa-solid fa-binoculars"></i>
+						<span>Intelligent operational visibility</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="adv-item wow fadeInUp" data-wow-delay="0.4s">
+						<i class="fa-solid fa-shield-halved"></i>
+						<span>Improved safety &amp; security monitoring</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="adv-item wow fadeInUp" data-wow-delay="0.5s">
+						<i class="fa-solid fa-cloud"></i>
+						<span>Scalable and future-ready infrastructure</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="adv-item wow fadeInUp" data-wow-delay="0.6s">
+						<i class="fa-solid fa-tower-broadcast"></i>
+						<span>Real-time monitoring &amp; analytics</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="adv-item wow fadeInUp" data-wow-delay="0.7s">
+						<i class="fa-solid fa-brain"></i>
+						<span>Smarter and data-driven decision-making</span>
+					</div>
+				</div>
+			</div>
+			<!-- Operational Advantages row end -->
+
+			<!-- ── Industry Applications ── -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="ai-sub-heading wow fadeInUp">
+						<h2>Industry Applications</h2>
+					</div>
+				</div>
+
+				<!-- 1 -->
+				<div class="col-lg-3 col-md-6">
+					<div class="project-item wow fadeInUp">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Government & Smart Cities.jpg" alt="Government & Smart Cities">
+							</figure>
+						</div>
+						<div class="project-content">
+							<h3>Government &amp; Smart Cities</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="col-lg-3 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="0.2s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Traffic & Transportation.jpg" alt="Traffic & Transportation">
+							</figure>
+						</div>
+						<div class="project-content">
+							<h3>Traffic &amp; Transportation</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3 -->
+				<div class="col-lg-3 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="0.4s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Public Safety Operations.jpg" alt="Public Safety Operations">
+							</figure>
+						</div>
+						<div class="project-content">
+							<h3>Public Safety Operations</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- 4 -->
+				<div class="col-lg-3 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Airports & Railways.jpg" alt="Airports & Railways">
+							</figure>
+						</div>
+						<div class="project-content">
+							<h3>Airports &amp; Railways</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- 5 -->
+				<div class="col-lg-3 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="0.8s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Manufacturing & Logistics.jpg" alt="Manufacturing & Logistics">
+							</figure>
+						</div>
+						<div class="project-content">
+							<h3>Manufacturing &amp; Logistics</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- 6 -->
+				<div class="col-lg-3 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="1s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Enterprise Security.jpg" alt="Enterprise Security">
+							</figure>
+						</div>
+						<div class="project-content">
+							<h3>Enterprise Security</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- 7 -->
+				<div class="col-lg-3 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="1.2s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Industrial Infrastructure.jpg" alt="Industrial Infrastructure">
+							</figure>
+						</div>
+						<div class="project-content">
+							<h3>Industrial Infrastructure</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- 8 -->
+				<div class="col-lg-3 col-md-6">
+					<div class="project-item wow fadeInUp" data-wow-delay="1.4s">
+						<div class="project-image">
+							<figure class="image-anime">
+								<img src="img/Urban Monitoring Systems.jpg" alt="Urban Monitoring Systems">
+							</figure>
+						</div>
+						<div class="project-content">
+							<h3>Urban Monitoring Systems</h3>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Industry Applications row end -->
+
+		</div>
+	</div>
+	<!-- Page Projects End -->
+
+	 <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-header">
+                        <div class="footer-logo">
+                            <img src="img/logo.jpeg" alt="Inforx">
+                        </div>
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-4">
+                    <div class="footer-links footer-newsletter-form">
+                        <h3>Stay informed:</h3>
+                        <p>Get the latest AI surveillance insights and platform updates.</p>
+                        <form id="newsletterForm" action="#" method="POST">
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" id="mail"
+                                    placeholder="Enter Your Email" required="">
+                                <button type="submit" class="newsletter-btn"><i
+                                        class="fa-regular fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="footer-links footer-quick-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="why-infonix.html">Why Inforx</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="ai-power-solution.html">AI Power Solutions</a></li>
+                            <!-- <li><a href="blog.html">Blog</a></li> -->
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solutions -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="footer-links">
+                        <h3>Solutions</h3>
+                        <ul>
+                            <li><a href="traffic-monitoring.html">Traffic Monitoring</a></li>
+                            <li><a href="crowd-management.html">Crowd Management</a></li>
+                            <li><a href="flood-water-monitoring.html">Flood & Water Monitoring</a></li>
+                            <li><a href="public-safety-monitoring.html">Public Safety Monitoring</a></li>
+                            <li><a href="emergency-response-coordination.html">Emergency Response Coordination</a></li>
+                            <li><a href="centralized-command-center.html">Centralized Command Center</a></li>
+                            <li><a href="ai-alert-escalation.html">AI Alert & Escalation Systems</a></li>
+                            <li><a href="incident-detection.html">Incident Detection</a></li>
+                            <li><a href="smart-surveillance-systems.html">Smart Surveillance Systems</a></li>
+                            <li><a href="predictive-analytics-intelligence.html">Predictive Analytics & Intelligence</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Industries -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="footer-links">
+                        <h3>Industries</h3>
+                        <ul>
+                            <li>Government</li>
+                            <li>Smart Cities</li>
+                            <li>Police & Law Enforcement</li>
+                            <li>Traffic Management</li>
+                            <li>Municipal Operations</li>
+                            <li>Disaster Management</li>
+                            <li>Airports</li>
+                            <li>Railways</li>
+                            <li>Transportation</li>
+                            <li>Logistics</li>
+                            <li>Manufacturing</li>
+                            <li>Warehousing</li>
+                            <li>Enterprise Security</li>
+                            <!-- <li>Real Estate</li>
+                            <li>Infrastructure</li>
+                            <li>Industrial Operations</li>
+                            <li>Healthcare</li>
+                            <li>Education Campuses</li>
+                            <li>Hospitality</li>
+                            <li>Retail & Commercial Spaces</li>
+                            <li>IT Parks & Corporate Campuses</li>
+                            <li>Ports & Maritime Operations</li>
+                            <li>Public Infrastructure</li>
+                            <li>Utilities & Energy</li>
+                            <li>Defense & Strategic Operations</li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="footer-links">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="tel:+911234567890">+91 00 000 0000</a></li>
+                            <li><a href="mailto:info@inforx.ai">info@inforx.ai</a></li>
+                            <li><a href="contact.html">Request a Demo</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-copyright-text">
+                            <p>Copyright &copy; 2026 Inforx. All Rights Reserved </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+</body>
+
+</html>
