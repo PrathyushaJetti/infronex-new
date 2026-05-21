@@ -7,34 +7,202 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="Inforx - AI-Powered Surveillance & Security Intelligence Platform">
-    <meta name="keywords"
-        content="AI surveillance, smart city security, traffic monitoring, crowd management, public safety AI">
+    <meta name="keywords" content="AI surveillance, smart city security, traffic monitoring, crowd management, public safety AI">
     <meta name="author" content="Inforx">
-    <!-- Page Title -->
     <title>Inforx - AI-Powered Surveillance & Security Intelligence</title>
-    <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpeg">
-    <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
-    <!-- Bootstrap Css -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- SlickNav Css -->
     <link href="css/slicknav.min.css" rel="stylesheet">
-    <!-- Swiper Css -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <!-- Font Awesome Icon Css-->
     <link href="css/all.min.css" rel="stylesheet" media="screen">
-    <!-- Animated Css -->
     <link href="css/animate.css" rel="stylesheet">
-    <!-- Magnific Popup Core Css File -->
     <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- Mouse Cursor Css File -->
     <link rel="stylesheet" href="css/mousecursor.css">
-    <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
+
+    <style>
+        /* ─────────────────────────────────────────
+           Why Infronex Section
+        ───────────────────────────────────────── */
+        .why-infronex {
+            padding: 100px 0;
+            background: var(--secondary-color);
+        }
+
+        /* Grid */
+        .why-infronex-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 991px) {
+            .why-infronex-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 575px) {
+            .why-infronex-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card base */
+        .why-infronex-card {
+            position: relative;
+            background: var(--white-color);
+            border: 1.5px solid var(--divider-color);
+            border-radius: 20px;
+            padding: 32px 28px;
+            overflow: hidden;
+            transition: border-color 0.35s ease,
+                        box-shadow 0.35s ease,
+                        transform 0.35s ease;
+        }
+
+        /* Top accent bar — always present, dim by default */
+        .why-infronex-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90.15deg, var(--accent-color) 1.15%, var(--accent-secondary-color) 98.84%);
+            border-radius: 20px 20px 0 0;
+            opacity: 0.3;
+            transition: opacity 0.35s ease;
+        }
+
+        /* Hover / active — border glow only, no fill */
+        .why-infronex-card:hover,
+        .why-infronex-card.active {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(77, 81, 171, 0.10),
+                        0 14px 36px rgba(77, 81, 171, 0.13);
+            transform: translateY(-5px);
+        }
+
+        .why-infronex-card:hover::before,
+        .why-infronex-card.active::before {
+            opacity: 1;
+        }
+
+        /* Icon box */
+        .why-infronex-card .card-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg,
+                rgba(77, 81, 171, 0.10),
+                rgba(85, 206, 227, 0.10));
+            border: 1.5px solid rgba(77, 81, 171, 0.15);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            transition: background 0.35s ease,
+                        border-color 0.35s ease,
+                        transform 0.35s ease;
+        }
+
+        .why-infronex-card:hover .card-icon,
+        .why-infronex-card.active .card-icon {
+            background: linear-gradient(135deg,
+                rgba(77, 81, 171, 0.18),
+                rgba(85, 206, 227, 0.18));
+            border-color: rgba(77, 81, 171, 0.35);
+            transform: scale(1.07);
+        }
+
+        .why-infronex-card .card-icon img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        /* Heading — matches .service-title h3 */
+        .why-infronex-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.3em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .why-infronex-card:hover h3,
+        .why-infronex-card.active h3 {
+            color: var(--accent-color);
+        }
+
+        /* Description — matches body p */
+        .why-infronex-card .card-desc {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.7em;
+            color: var(--text-color);
+            margin-bottom: 18px;
+        }
+
+        /* Sub label */
+        .why-infronex-card .card-sub-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .why-infronex-card .card-sub-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(77, 81, 171, 0.18);
+        }
+
+        /* List */
+        .why-infronex-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .why-infronex-card ul li {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7em;
+            color: var(--text-color);
+            padding: 5px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+        }
+
+        .why-infronex-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .why-infronex-card ul li::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color));
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -54,20 +222,11 @@
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <div class="topbar-info-text">
-                        <p>AI-powered intelligence for safer cities and smarter operations <a
-                                href="contact.html">Request a Demo</a></p>
+                        <p>AI-powered intelligence for safer cities and smarter operations <a href="contact.html">Request a Demo</a></p>
                     </div>
                 </div>
-
                 <div class="col-md-5">
                     <div class="topbar-links">
-                        <!-- <div class="topbar-contact-info">
-                            <ul>
-                                <li><a href="contact.html">Help</a></li>
-                                <li><a href="contact.html">Support</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div> -->
                         <div class="topbar-social-links">
                             <ul>
                                 <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
@@ -154,430 +313,198 @@
     </header>
     <!-- Header End -->
 
-	<!-- Page Header Start -->
-	<div class="page-header parallaxie">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-12">
-					<div class="page-header-box">
-						<h1 class="wow fadeInUp" data-cursor="-opaque">Why Infronex</h1>
-						<nav class="wow fadeInUp" data-wow-delay="0.2s">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Home</a> / Why Infronex</li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Page Header End -->
+    <!-- Page Header Start -->
+    <div class="page-header parallaxie">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="page-header-box">
+                        <h1 class="wow fadeInUp" data-cursor="-opaque">Why Infronex</h1>
+                        <nav class="wow fadeInUp" data-wow-delay="0.2s">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a> / Why Infronex</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
 
+    <!-- Why Infronex Section Start -->
+    <div class="why-infronex">
+        <div class="container">
 
-<style>
-	/* Add this at the top of your <style> block */
-.why-infronex,
-.why-infronex-card,
-.why-infronex-card h3,
-.why-infronex-card .card-desc,
-.why-infronex-card .card-sub-label,
-.why-infronex-card ul li {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-/* ── Approach Cards ─────────────────────────────────────── */
-.approach-card {
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    padding: 36px 30px;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 30px;
-}
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">Why Infronex</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
+                            Intelligent Technology-<span>Driven Approach</span>
+                        </h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.4s">
+                            Infronex Digital Systems Pvt Ltd focuses on building intelligent, scalable, and future-ready AI-powered solutions designed to enhance operational visibility, monitoring, and decision-making.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-.approach-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #0a6cff, #00c8ff);
-    border-radius: 16px 16px 0 0;
-}
+            <div class="why-infronex-grid">
 
-.approach-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
-}
+                <!-- Card 1 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-1.svg" alt="Unified Intelligence Platform">
+                    </div>
+                    <h3>Unified Intelligence Platform</h3>
+                    <p class="card-desc">Our solutions centralize surveillance, analytics, alerts, and operational intelligence into a single unified ecosystem for better coordination and control.</p>
+                    <p class="card-sub-label">Platform Advantages</p>
+                    <ul>
+                        <li>Centralized monitoring systems</li>
+                        <li>Unified operational visibility</li>
+                        <li>Cross-functional intelligence</li>
+                        <li>Intelligent dashboard ecosystems</li>
+                    </ul>
+                </div>
 
-/* Highlighted (middle) card */
-.approach-card--highlight {
-    background: linear-gradient(145deg, #0a1628, #0d2045);
-    border-color: transparent;
-    color: #fff;
-}
+                <!-- Card 2 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-2.svg" alt="Real-Time Operational Visibility">
+                    </div>
+                    <h3>Real-Time Operational Visibility</h3>
+                    <p class="card-desc">We enable organizations to monitor, analyze, and respond to operational events in real time through advanced AI-powered monitoring and analytics systems.</p>
+                    <p class="card-sub-label">Operational Benefits</p>
+                    <ul>
+                        <li>Real-time monitoring & alerts</li>
+                        <li>Faster incident response</li>
+                        <li>Improved situational awareness</li>
+                        <li>Intelligent operational insights</li>
+                    </ul>
+                </div>
 
-.approach-card--highlight::before {
-    background: linear-gradient(90deg, #00c8ff, #0a6cff);
-}
+                <!-- Card 3 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-3.svg" alt="Scalable & Flexible Architecture">
+                    </div>
+                    <h3>Scalable & Flexible Architecture</h3>
+                    <p class="card-desc">Our platforms are designed to support evolving operational environments and scalable deployments across industries.</p>
+                    <p class="card-sub-label">Infrastructure Strengths</p>
+                    <ul>
+                        <li>Scalable system architecture</li>
+                        <li>Cloud-ready infrastructure</li>
+                        <li>Flexible deployment capabilities</li>
+                        <li>Multi-location operational support</li>
+                    </ul>
+                </div>
 
-.approach-card--highlight .approach-card-intro,
-.approach-card--highlight .approach-card-sub {
-    color: rgba(255, 255, 255, 0.75);
-}
+                <!-- Card 4 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-4.svg" alt="AI-Powered Automation">
+                    </div>
+                    <h3>AI-Powered Automation</h3>
+                    <p class="card-desc">From predictive analytics to intelligent alerts and automated workflows, our systems help improve efficiency and reduce manual intervention.</p>
+                    <p class="card-sub-label">Automation Capabilities</p>
+                    <ul>
+                        <li>Smart alert systems</li>
+                        <li>Automated escalation workflows</li>
+                        <li>Predictive intelligence</li>
+                        <li>AI-driven operational analytics</li>
+                    </ul>
+                </div>
 
-.approach-card--highlight .approach-card-list li {
-    color: rgba(255, 255, 255, 0.85);
-}
+                <!-- Card 5 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-5.svg" alt="Industry-Focused Solutions">
+                    </div>
+                    <h3>Industry-Focused Solutions</h3>
+                    <p class="card-desc">We deliver tailored solutions across multiple government and enterprise sectors.</p>
+                    <p class="card-sub-label">Industries We Serve</p>
+                    <ul>
+                        <li>Government & Smart Cities</li>
+                        <li>Traffic & Transportation</li>
+                        <li>Airports & Railways</li>
+                        <li>Logistics & Manufacturing</li>
+                        <li>Enterprise Security</li>
+                        <li>Infrastructure & Public Operations</li>
+                    </ul>
+                </div>
 
-.approach-card--highlight .approach-card-list li i {
-    color: #00c8ff;
-}
+                <!-- Card 6 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-6.svg" alt="Advanced Analytics">
+                    </div>
+                    <h3>Advanced Analytics & Decision Support</h3>
+                    <p class="card-desc">Our systems transform operational data into actionable intelligence that supports strategic and data-driven decision-making.</p>
+                    <p class="card-sub-label">Intelligence Features</p>
+                    <ul>
+                        <li>Predictive analytics</li>
+                        <li>Operational reporting</li>
+                        <li>Pattern recognition</li>
+                        <li>Real-time data insights</li>
+                    </ul>
+                </div>
 
-.approach-card--highlight .approach-card-divider {
-    background: rgba(255, 255, 255, 0.15);
-}
+                <!-- Card 7 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-1.svg" alt="Secure Infrastructure">
+                    </div>
+                    <h3>Secure & Reliable Infrastructure</h3>
+                    <p class="card-desc">We prioritize security, operational reliability, and data protection across all platforms and solutions.</p>
+                    <p class="card-sub-label">Security Features</p>
+                    <ul>
+                        <li>Data encryption</li>
+                        <li>Role-based access control</li>
+                        <li>Centralized governance</li>
+                        <li>Audit trail & compliance support</li>
+                    </ul>
+                </div>
 
-.approach-card--highlight h3 {
-    color: #fff;
-}
+                <!-- Card 8 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-2.svg" alt="Innovation">
+                    </div>
+                    <h3>Innovation & Future Readiness</h3>
+                    <p class="card-desc">We continuously focus on innovation and emerging technologies to build intelligent systems for the future.</p>
+                    <p class="card-sub-label">Future-Ready Approach</p>
+                    <ul>
+                        <li>AI-driven innovation</li>
+                        <li>Intelligent automation</li>
+                        <li>Scalable digital ecosystems</li>
+                        <li>Continuous technology evolution</li>
+                    </ul>
+                </div>
 
-/* Icon box - light cards */
-.approach-icon-box {
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(135deg, rgba(10, 108, 255, 0.12), rgba(0, 200, 255, 0.12));
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
+                <!-- Card 9 -->
+                <div class="why-infronex-card wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="card-icon">
+                        <img src="images/icon-service-3.svg" alt="Digital Transformation">
+                    </div>
+                    <h3>End-to-End Digital Transformation</h3>
+                    <p class="card-desc">From intelligent monitoring and analytics to operational intelligence and automation, we help organizations accelerate digital transformation through advanced technology solutions.</p>
+                    <p class="card-sub-label">Transformation Areas</p>
+                    <ul>
+                        <li>Operational modernization</li>
+                        <li>Intelligent monitoring systems</li>
+                        <li>Digital workflow optimization</li>
+                        <li>Data-driven operational ecosystems</li>
+                    </ul>
+                </div>
 
-.approach-icon-box img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
+            </div>
+        </div>
+    </div>
+    <!-- Why Infronex Section End -->
 
-/* Icon box - dark highlighted card: invert SVG to white */
-.approach-card--highlight .approach-icon-box {
-    background: rgba(255, 255, 255, 0.10);
-}
-
-.approach-card--highlight .approach-icon-box img {
-    filter: brightness(0) invert(1);
-}
-
-/* Card Header */
-.approach-card-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 18px;
-}
-
-.approach-card-header h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 0;
-    color: #0a1628;
-}
-
-/* Card Text */
-.approach-card-intro {
-    font-size: 14px;
-    line-height: 1.75;
-    color: #555;
-    margin-bottom: 18px;
-}
-
-.approach-card-divider {
-    height: 1px;
-    background: rgba(0, 0, 0, 0.08);
-    margin-bottom: 16px;
-}
-
-.approach-card-sub {
-    font-size: 13px;
-    font-weight: 600;
-    color: #777;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 12px;
-}
-
-/* Checklist */
-.approach-card-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.approach-card-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 14px;
-    color: #444;
-    padding: 6px 0;
-    line-height: 1.5;
-}
-
-.approach-card-list li i {
-    color: #0a6cff;
-    font-size: 15px;
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-/* ── Why Infronex Section ─────────────────────────────────────── */
-.why-infronex {
-    padding: 80px 0;
-    background: #f8faff;
-}
-
-.why-infronex-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 40px;
-}
-
-@media (max-width: 991px) {
-    .why-infronex-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 575px) {
-    .why-infronex-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.why-infronex-card {
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    border-radius: 14px;
-    padding: 30px 26px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-infronex-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #0a6cff, #00c8ff);
-    border-radius: 14px 14px 0 0;
-}
-
-.why-infronex-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 40px rgba(10, 108, 255, 0.10);
-}
-
-.why-infronex-card h3 {
-    font-size: 17px;
-    font-weight: 700;
-    color: #0a1628;
-    margin-bottom: 8px;
-}
-
-.why-infronex-card .card-desc {
-    font-size: 13.5px;
-    color: #666;
-    line-height: 1.65;
-    margin-bottom: 16px;
-}
-
-.why-infronex-card .card-sub-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    color: #0a6cff;
-    margin-bottom: 10px;
-}
-
-.why-infronex-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.why-infronex-card ul li {
-    font-size: 13px;
-    color: #555;
-    padding: 4px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    line-height: 1.5;
-}
-
-.why-infronex-card ul li::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #0a6cff, #00c8ff);
-    margin-top: 6px;
-    flex-shrink: 0;
-}
-</style>
-
-	<!-- Why Infronex Section Start -->
-	<div class="why-infronex">
-		<div class="container">
-			<div class="row section-row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h3 class="wow fadeInUp">Why Infronex</h3>
-						<h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Intelligent Technology-<span>Driven Approach</span></h2>
-						<p class="wow fadeInUp" data-wow-delay="0.4s">Infronex Digital Systems Pvt Ltd focuses on building intelligent, scalable, and future-ready AI-powered solutions designed to enhance operational visibility, monitoring, and decision-making.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="why-infronex-grid">
-
-				<!-- Card 1: Unified Intelligence Platform -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.1s">
-					<h3>Unified Intelligence Platform</h3>
-					<p class="card-desc">Our solutions centralize surveillance, analytics, alerts, and operational intelligence into a single unified ecosystem for better coordination and control.</p>
-					<p class="card-sub-label">Platform Advantages</p>
-					<ul>
-						<li>Centralized monitoring systems</li>
-						<li>Unified operational visibility</li>
-						<li>Cross-functional intelligence</li>
-						<li>Intelligent dashboard ecosystems</li>
-					</ul>
-				</div>
-
-				<!-- Card 2: Real-Time Operational Visibility -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.2s">
-					<h3>Real-Time Operational Visibility</h3>
-					<p class="card-desc">We enable organizations to monitor, analyze, and respond to operational events in real time through advanced AI-powered monitoring and analytics systems.</p>
-					<p class="card-sub-label">Operational Benefits</p>
-					<ul>
-						<li>Real-time monitoring & alerts</li>
-						<li>Faster incident response</li>
-						<li>Improved situational awareness</li>
-						<li>Intelligent operational insights</li>
-					</ul>
-				</div>
-
-				<!-- Card 3: Scalable & Flexible Architecture -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.3s">
-					<h3>Scalable & Flexible Architecture</h3>
-					<p class="card-desc">Our platforms are designed to support evolving operational environments and scalable deployments across industries.</p>
-					<p class="card-sub-label">Infrastructure Strengths</p>
-					<ul>
-						<li>Scalable system architecture</li>
-						<li>Cloud-ready infrastructure</li>
-						<li>Flexible deployment capabilities</li>
-						<li>Multi-location operational support</li>
-					</ul>
-				</div>
-
-				<!-- Card 4: AI-Powered Automation -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.4s">
-					<h3>AI-Powered Automation</h3>
-					<p class="card-desc">From predictive analytics to intelligent alerts and automated workflows, our systems help improve efficiency and reduce manual intervention.</p>
-					<p class="card-sub-label">Automation Capabilities</p>
-					<ul>
-						<li>Smart alert systems</li>
-						<li>Automated escalation workflows</li>
-						<li>Predictive intelligence</li>
-						<li>AI-driven operational analytics</li>
-					</ul>
-				</div>
-
-				<!-- Card 5: Industry-Focused Solutions -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.5s">
-					<h3>Industry-Focused Solutions</h3>
-					<p class="card-desc">We deliver tailored solutions across multiple government and enterprise sectors.</p>
-					<p class="card-sub-label">Industries We Serve</p>
-					<ul>
-						<li>Government & Smart Cities</li>
-						<li>Traffic & Transportation</li>
-						<li>Airports & Railways</li>
-						<li>Logistics & Manufacturing</li>
-						<li>Enterprise Security</li>
-						<li>Infrastructure & Public Operations</li>
-					</ul>
-				</div>
-
-				<!-- Card 6: Advanced Analytics & Decision Support -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.6s">
-					<h3>Advanced Analytics & Decision Support</h3>
-					<p class="card-desc">Our systems transform operational data into actionable intelligence that supports strategic and data-driven decision-making.</p>
-					<p class="card-sub-label">Intelligence Features</p>
-					<ul>
-						<li>Predictive analytics</li>
-						<li>Operational reporting</li>
-						<li>Pattern recognition</li>
-						<li>Real-time data insights</li>
-					</ul>
-				</div>
-
-				<!-- Card 7: Secure & Reliable Infrastructure -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.7s">
-					<h3>Secure & Reliable Infrastructure</h3>
-					<p class="card-desc">We prioritize security, operational reliability, and data protection across all platforms and solutions.</p>
-					<p class="card-sub-label">Security Features</p>
-					<ul>
-						<li>Data encryption</li>
-						<li>Role-based access control</li>
-						<li>Centralized governance</li>
-						<li>Audit trail & compliance support</li>
-					</ul>
-				</div>
-
-				<!-- Card 8: Innovation & Future Readiness -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.8s">
-					<h3>Innovation & Future Readiness</h3>
-					<p class="card-desc">We continuously focus on innovation and emerging technologies to build intelligent systems for the future.</p>
-					<p class="card-sub-label">Future-Ready Approach</p>
-					<ul>
-						<li>AI-driven innovation</li>
-						<li>Intelligent automation</li>
-						<li>Scalable digital ecosystems</li>
-						<li>Continuous technology evolution</li>
-					</ul>
-				</div>
-
-				<!-- Card 9: End-to-End Digital Transformation -->
-				<div class="why-infronex-card wow fadeInUp" data-wow-delay="0.9s">
-					<h3>End-to-End Digital Transformation</h3>
-					<p class="card-desc">From intelligent monitoring and analytics to operational intelligence and automation, we help organizations accelerate digital transformation through advanced technology solutions.</p>
-					<p class="card-sub-label">Transformation Areas</p>
-					<ul>
-						<li>Operational modernization</li>
-						<li>Intelligent monitoring systems</li>
-						<li>Digital workflow optimization</li>
-						<li>Data-driven operational ecosystems</li>
-					</ul>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<!-- Why Infronex Section End -->
-
-    
-
- <footer class="main-footer">
+    <!-- Footer Start -->
+    <footer class="main-footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -601,15 +528,6 @@
                     <div class="footer-links footer-newsletter-form">
                         <h3>Stay informed:</h3>
                         <p>Infronex is a technology-driven company specializing in AI-powered surveillance, monitoring, analytics, and operational intelligence solutions. We help enterprises transform real-time data into actionable insights to improve security, efficiency, and decision-making.</p>
-
-                        <!-- <form id="newsletterForm" action="#" method="POST">
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control" id="mail"
-                                    placeholder="Enter Your Email" required="">
-                                <button type="submit" class="newsletter-btn"><i
-                                        class="fa-regular fa-paper-plane"></i></button>
-                            </div>
-                        </form> -->
                     </div>
                 </div>
 
@@ -624,13 +542,11 @@
                             <li><a href="solutions.html">Solutions</a></li>
                             <li><a href="ai-power-solution.html">AI Power Solutions</a></li>
                             <li><a href="Industries-we-work-with.html">Industries We Work With</a></li>
-                            <!-- <li><a href="blog.html">Blog</a></li> -->
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
-                    </div> 
+                    </div>
                 </div>
 
-    
                 <!-- Contact Details -->
                 <div class="col-lg-4 col-md-3 col-6">
                     <div class="footer-links">
@@ -654,7 +570,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer-copyright-text">
-                            <p>Copyright &copy; 2026 Inforx. All Rights Reserved </p>
+                            <p>Copyright &copy; 2026 Inforx. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
@@ -663,37 +579,23 @@
     </footer>
     <!-- Footer End -->
 
-    <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
     <script src="js/validator.min.js"></script>
-    <!-- SlickNav js file -->
     <script src="js/jquery.slicknav.js"></script>
-    <!-- Swiper js file -->
     <script src="js/swiper-bundle.min.js"></script>
-    <!-- Counter js file -->
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
-    <!-- Magnific js file -->
     <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- SmoothScroll -->
     <script src="js/SmoothScroll.js"></script>
-    <!-- Parallax js -->
     <script src="js/parallaxie.js"></script>
-    <!-- MagicCursor js file -->
     <script src="js/gsap.min.js"></script>
     <script src="js/magiccursor.js"></script>
-    <!-- Text Effect js file -->
     <script src="js/SplitText.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
-    <!-- YTPlayer js File -->
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
-    <!-- Wow js file -->
     <script src="js/wow.min.js"></script>
-    <!-- Main Custom js file -->
     <script src="js/function.js"></script>
-</body>
 
+</body>
 </html>
